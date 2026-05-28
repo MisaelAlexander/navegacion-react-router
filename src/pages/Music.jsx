@@ -1,8 +1,8 @@
 import React from "react";
  
-import DataTestForm from "../components/DataTestForm";
-import DataTestList from "../components/DataTestList";
-import useDataTest from "../hooks/useDataTest";
+import DataTestForm from "../components/DataTestFormMusic";
+import DataTestList from "../components/DataTestMusic";
+import useDataTest from "../hooks/useDataCancion";
  
 const Contact = () => {
   const {
@@ -14,10 +14,12 @@ const Contact = () => {
     error,
     message,
     id,
-    name,
-    setName,
-    age,
-    setAge,
+    cancion,
+    setCancion,
+    cantante,
+    setCantante,
+    nacionalidad,
+    setNacionalidad,
     openCreateForm,
     handleEdit,
     handleSubmit,
@@ -68,10 +70,12 @@ const Contact = () => {
         {activeTab === "form" ? (
           <DataTestForm
             id={id}
-            name={name}
-            setName={setName}
-            age={age}
-            setAge={setAge}
+            cancion={cancion}
+            setCancion={setCancion}
+            cantante={cantante}
+            setCantante={setCantante}
+            nacionalidad={nacionalidad}
+            setNacionalidad={setNacionalidad}
             onSubmit={handleSubmit}
             onCancel={() => setActiveTab("list")}
             submitting={submitting}
